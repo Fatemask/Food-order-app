@@ -53,13 +53,14 @@ const AvailableMeals = () => {
         });
       };
       setMeals(loadedMeals);
-      isLoading(false);
+      setLoading(false);
     };
 
     
       fetchMeals().catch(error =>{
-      setisLoading(false);
+      setLoading(false);
       setHttpError(error.message);
+      console.log(error);
       })
 
   },[]);
